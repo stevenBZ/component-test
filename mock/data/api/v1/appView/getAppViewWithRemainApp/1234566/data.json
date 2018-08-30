@@ -1,0 +1,60 @@
+{
+    "code": 200,
+    "message": "ok",
+    "data":{
+      "code": 200,
+      "message": "ok",
+      "data": 
+          {
+            "identify": "2345",   
+            "isCenter": true, 
+            "envName": "online", 
+            "unit": "单元一",
+
+   
+            "appViewName": "mock视图", 
+            "owner": "张洪箫",    
+            "shareUser": "严晓波", 
+            "desc": "这是一个mock视图",
+            "idcList": ["主机一","主机二","主机三"],
+            "appDetailList": [
+                {
+                    "appName": "应用一",
+                    "appId": "123422356",
+                    "hostModel": "Dva360",
+                    "hostNum": 4,
+                    "branch": "dev_3042",
+                    "seq": 4,
+                    "leaf":[
+                        {
+                            "appName": "应用二",
+                            "appId": "12324436",
+                            "hostModel": "Dva350",
+                            "hostNum": 4,
+                            "branch": "dev_3042",
+                            "seq": 4,
+                            "leaf":null
+                        },
+                        {
+                            "appName": "应用四",
+                            "appId": "12355326",
+                            "hostModel": "Dva350",
+                            "hostNum": 4,
+                            "branch": "dev_3042",
+                            "seq": 4,
+                            "leaf":null
+                        }
+                    ]
+                }
+            ],
+            "remainAppList": [{
+                "appName": "应用三",
+                "appId": "12266156",
+                "hostModel": "Dva340",
+                "hostNum": 4,
+                "branch": "dev_3042",
+                "seq": 4
+            }]
+          } 
+    }
+}

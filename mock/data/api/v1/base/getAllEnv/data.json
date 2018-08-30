@@ -1,0 +1,16 @@
+{
+    "code": 200,
+    "message": "ok",
+    "data":{
+      "code": 200,
+      "message": "ok",
+      "data": [
+          "online",
+          "pre",
+          "test2-kaola",
+          "test3-kaola",
+          "test4-kaola",
+          "test5-kaola"
+      ]
+    }
+}

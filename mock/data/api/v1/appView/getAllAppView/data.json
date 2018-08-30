@@ -1,0 +1,21 @@
+{
+    "code": 200,
+    "message": "ok",
+    "data":{
+      "code": 200,
+      "message": "ok",
+      "data": [
+          {
+            "identify": "2345",   
+            "isCenter": "true", 
+            "appViewId": "1234566",    
+            "appViewName": "mock视图", 
+            "owner": "张洪箫",    
+            "shareUser": "严晓波", 
+            "desc": "这是一个mock视图",     
+            "envName": "online",    
+            "unit": "单元一"     
+          } 
+      ]
+    }
+}
