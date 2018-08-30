@@ -5,16 +5,21 @@
 ## start
 
 For the first time:
+```
+npm install
+```
 
 ```bash
 npm run build:dll
 ```
 
-develop:
+develop(mock):
 
 ```bash
 npm run dev
 ```
+
+
 
 build:
 
