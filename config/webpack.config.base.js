@@ -1,8 +1,10 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+const _ = require('./utils');
 const webpack = require('webpack');
 const path = require('path');
+const buildConfig = require('./build.config');
 
 const {
   NODE_ENV,
@@ -13,9 +15,9 @@ const {
   MODE = 'development'
 } = process.env;
 
-function resolve(p = '') {
-  return path.join(__dirname, '../', p);
-}
+// function resolve(p = '') {
+//   return path.join(__dirname, '../', p);
+// }
 
 const mode = MODE || 'development';
 
@@ -26,6 +28,7 @@ console.info(`running in ${mode} mode`);
 module.exports = {
   output: {
     publicPath: '/',
+    path: buildConfig.output
   },
   entry: {
     index: [
@@ -36,7 +39,7 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('./src')
+      '@': _.resolve('./src')
     }
   },
   module: {
@@ -74,15 +77,16 @@ module.exports = {
     new FriendlyErrorsWebpackPlugin(),
 
     new webpack.DllReferencePlugin({
-      context: resolve(),
-      manifest: require(resolve('./dist/dll/manifest.json')),
+      context: _.resolve(),
+      manifest: require(_.resolve(buildConfig.output, 'dll/manifest.json')),
     }),
 
     new HtmlWebpackPlugin({
-      template: resolve('./src/templates/index.html'),
+      template: _.resolve('./src/templates/index.html'),
+      hash: true
     }),
     new AddAssetHtmlPlugin({
-      filepath: resolve('./dist/dll/runtime_*.js')
+      filepath: _.resolve(buildConfig.output, 'dll/runtime_*.js')
     }),
 
     // scope hoisting
