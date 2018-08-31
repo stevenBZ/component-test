@@ -19,6 +19,12 @@ develop(mock):
 npm run dev
 ```
 
+develop(连接后台):
+
+```bash
+npm run dev
+```
+
 
 
 build:
