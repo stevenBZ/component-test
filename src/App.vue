@@ -6,7 +6,7 @@
         <img style="height: 42px" src="//haitao.nos.netease.com/fb11aa98-5098-4048-a4ad-1e10b78e8864.svg" alt="logo">
       </div>
       <div class="logo_titleWrap">
-        <h1 class="logo_title">考拉 | 流量平台</h1>
+        <h1 class="logo_title">考拉 | 后台系统</h1>
       </div>
     </el-header>
     <el-container>
@@ -32,18 +32,18 @@
 
 <script>
 import catalog from './config/catalog';
-import pageHeader from './container/pageHeader/pageHeader'
+// import pageHeader from './container/pageHeader/pageHeader';
 export default {
-  name: "App",
-  data: function() {
-    return {
-      catalog: catalog,
-      footerHeight: '30px'
-    };
-  },
-  components:{
-    'pageHeader': () => import('./container/pageHeader/pageHeader')
-  }
+    name: 'App',
+    data() {
+        return {
+            catalog,
+            footerHeight: '30px'
+        };
+    },
+    components: {
+        pageHeader: () => import('./container/pageHeader/pageHeader')
+    }
 };
 </script>
 
