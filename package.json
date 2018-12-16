@@ -1,8 +1,18 @@
 {
   "name": "template-vue-spa",
+  "keywords": [
+    "ice-scaffold"
+  ],
   "private": true,
   "version": "1.0.0",
+  "scaffoldConfig": {
+    "type": "vue",
+    "name": "ice-design-pro",
+    "title": "ICE Design Pro",
+    "screenshot": "https://img.alicdn.com/tfs/TB1_bulmpOWBuNjy0FiXXXFxVXa-1920-1080.png"
+  },
   "scripts": {
+    "start": "npm run dev",
     "build": "rm -rf ../resources/common/static && npm run build:dll && npm run build:prod",
     "build:prod": "cross-env MODE=production webpack --config ./config/webpack.config.prod.js",
     "build:dll": "webpack --config ./config/webpack.config.dll.js",
@@ -15,11 +25,14 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
+    "@antv/g6": "^2.2.3",
     "axios": "^0.18.0",
     "echarts": "^4.0.4",
     "element-theme-default": "^1.4.13",
     "element-ui": "^2.2.2",
+    "jquery": "^3.3.1",
     "lodash": "^4.17.5",
+    "raphael": "^2.2.7",
     "vue": "^2.5.16",
     "vue-json-excel": "^0.2.5",
     "vue-router": "^3.0.1",
@@ -56,7 +69,6 @@
     "file-loader": "^1.1.11",
     "friendly-errors-webpack-plugin": "^1.6.1",
     "html-webpack-plugin": "^3.0.6",
-    "husky": "^0.14.3",
     "koa": "^2.5.0",
     "koa-webpack": "^3.0.2",
     "less": "^3.0.1",

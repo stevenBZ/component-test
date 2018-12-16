@@ -2,11 +2,8 @@
   <el-container class="container">
     <!-- <pageHeader /> -->
     <el-header class="header">
-      <div>
-        <img style="height: 42px" src="//haitao.nos.netease.com/fb11aa98-5098-4048-a4ad-1e10b78e8864.svg" alt="logo">
-      </div>
       <div class="logo_titleWrap">
-        <h1 class="logo_title">考拉 | 后台系统</h1>
+        <h1 class="logo_title">vue组件测试</h1>
       </div>
     </el-header>
     <el-container>
@@ -56,7 +53,8 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background:#23364a;
+  /* background:#23364a; */
+  background-image: url('./assets/timg.jpeg');
 }
 .logo_titleWrap{ margin-left:10px; color:#fff;}
 .logo_title { line-height: 20px;  font-size: 16px;  font-weight: normal; }
